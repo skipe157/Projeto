@@ -14,6 +14,12 @@ class Produto extends Model
 'peso'
   ];
 
+  public function produto()
+    {
+        return $this->hasMany('App\Produto');
+    }
+
+
 
 
   

@@ -14,5 +14,12 @@ class Categoria extends Model
         'peso'
           ];
 
+          
+          public function produto()
+          {
+              return $this->belongsTo('App\Categoria');
+          }
 
+
+          
 }

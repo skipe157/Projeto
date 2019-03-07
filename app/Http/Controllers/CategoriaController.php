@@ -149,13 +149,17 @@ class CategoriaController extends Controller
        
         $data = $request->all();
 
-        $categoria = Categoria::find($id);
+        $categoria= Categoria::find($id);
 
         if ($categoria) {
-            $categoria ->delete();
-            return response()->json(['data' =>'Deletadi','status'=>true]);
+            $categoria ->update($data);
+          
+          
+          
+            return response()->json(['data' =>$categoria,'status'=>true]);
+        
         }else{
-            return response()->json(['data' =>'Erro ao Deletar categoria','status'=>false]);
+            return response()->json(['data' =>'Erro ao criar categoria','status'=>false]);
         }
 
     }

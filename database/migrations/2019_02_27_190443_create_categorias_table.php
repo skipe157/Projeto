@@ -19,6 +19,8 @@ class CreateCategoriasTable extends Migration
             $table->decimal('preco',5, 2);
             $table->string('cor');
             $table->string('peso');
+
+
             $table->timestamps();
         });
     }

@@ -149,7 +149,9 @@ return response()->json(['data'=>$produto, 'status'=>true]);
 
         if($produto){
            $produto ->update($data);
-            return response()->json(['data'=>$produto, 'status'=>true]);
+          
+          
+           return response()->json(['data'=>$produto, 'status'=>true]);
               
         }else {
         
