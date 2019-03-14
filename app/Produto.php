@@ -12,11 +12,12 @@ class Produto extends Model
 'preco',
 'cor',
 'peso'
+
   ];
 
-  public function produto()
+  public function categorias()
     {
-        return $this->hasMany('App\Produto');
+        return $this->belongsTo('App\Categorias','categoria_id');
     }
 
 

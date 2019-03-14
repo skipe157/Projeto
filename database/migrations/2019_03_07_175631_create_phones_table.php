@@ -30,5 +30,14 @@ class CreatePhonesTable extends Migration
     public function down()
     {
         Schema::dropIfExists('phones');
+ 
+ 
+ 
+ 
+ 
     }
+
+  
+
+
 }

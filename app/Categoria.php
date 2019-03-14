@@ -9,15 +9,14 @@ class Categoria extends Model
   
     protected $fillable =[
         'descricao',
-        'preco',
-        'cor',
-        'peso'
+        'produtos' 
+     
           ];
 
           
-          public function produto()
+          public function produtos()
           {
-              return $this->belongsTo('App\Categoria');
+              return $this->hasMany('App\Produto','categoria_id');
           }
 
 
